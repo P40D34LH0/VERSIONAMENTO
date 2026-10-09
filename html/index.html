@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEGA'S HEALTHY HABITS</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="header-overlay">
+            <h1 class="titulo-retro">WEGA'S HEALTHY HABITS</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#dicas">Dicas</a></li>
+                    <li><a href="#teste">Teste de Hábitos</a></li>
+                    <li><a href="#calculadora">Calculadora de Rotina</a></li>
+                    <li><a href="#romanos">Conversor Romano</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="secao-hero">
+        <div class="hero-conteudo">
+            <div class="hero-texto">
+                <h2 class="texto-animado">WEGA'S HEALTHY HABITS</h2>
+                <p>Manter hábitos saudáveis durante a vida estudantil é fundamental para melhorar o rendimento nos estudos, manter a saúde mental em dia e ter energia para o cotidiano. Pequenas mudanças diárias em sono, alimentação e foco fazem toda a diferença!</p>
+            </div>
+            <div class="hero-imagem">
+                <img src="../img/dave.png" alt="Dave Ilustração" class="img-dave-hero">
+            </div>
+        </div>
+    </section>
+
+    <section id="dicas" class="secao-dicas">
+        <h2 class="titulo-secao">Dicas Práticas de Hábitos</h2>
+        <div class="cards-container">
+            
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="../img/Based_Irios.png" alt="Alimentação Saudável" class="img-base">
+                    <img src="../img/NewerestIrios.png" alt="Alimentação Saudável Hover" class="img-hover">
+                </div>
+                <h3>1. Alimentação Equilibrada</h3>
+                <p>Consuma frutas, vegetais e mantenha-se hidratado. Evite exagerar em ultraprocessados enquanto estuda.</p>
+            </article>
+
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="../img/Rorys_HD.png" alt="Sono Regulado" class="img-base">
+                    <img src="../img/Oldest_Golden_Rorys.png" alt="Sono Regulado Hover" class="img-hover">
+                </div>
+                <h3>2. Sono Renovador</h3>
+                <p>Dormir de 7 a 8 horas por noite fixa a aprendizagem na memória e restaura a energia mental.</p>
+            </article>
+
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="../img/GogajiIdle.png" alt="Atividade Física" class="img-base">
+                    <img src="../img/GogajiEvil.png" alt="Atividade Física Hover" class="img-hover">
+                </div>
+                <h3>3. Atividade Física</h3>
+                <p>Pratique pelo menos 30 minutos de exercícios físicos por dia para liberar endorfina e reduzir o estresse.</p>
+            </article>
+
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="../img/Gsigma.png" alt="Uso Consciente da Tecnologia" class="img-base">
+                    <img src="../img/Dsigma.png" alt="Uso Consciente da Tecnologia Hover" class="img-hover">
+                </div>
+                <h3>4. Foco & Telas</h3>
+                <p>Evite olhar o celular imediatamente antes de dormir e faça pausas ativas a cada 50 minutos de estudo.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="teste" class="secao-teste">
+        <h2 class="titulo-secao">Teste de Hábitos Saudáveis</h2>
+        
+        <div class="barra-progresso-container">
+            <div id="barraProgresso" class="barra-progresso-preenchimento"></div>
+        </div>
+
+        <form id="formTeste" class="form-teste">
+            <div class="pergunta">
+                <p>1. Você dorme pelo menos 7 horas por noite?</p>
+                <label><input type="radio" name="p1" value="1" required> Sim</label>
+                <label><input type="radio" name="p1" value="0"> Não</label>
+            </div>
+
+            <div class="pergunta">
+                <p>2. Você faz pausas regulares durante os estudos?</p>
+                <label><input type="radio" name="p2" value="1" required> Sim</label>
+                <label><input type="radio" name="p2" value="0"> Não</label>
+            </div>
+
+            <div class="pergunta">
+                <p>3. Você pratica alguma atividade física semanalmente?</p>
+                <label><input type="radio" name="p3" value="1" required> Sim</label>
+                <label><input type="radio" name="p3" value="0"> Não</label>
+            </div>
+
+            <div class="pergunta">
+                <p>4. Você evita usar o celular logo antes de dormir?</p>
+                <label><input type="radio" name="p4" value="1" required> Sim</label>
+                <label><input type="radio" name="p4" value="0"> Não</label>
+            </div>
+
+            <div class="pergunta">
+                <p>5. Você bebe pelo menos 2 litros de água por dia?</p>
+                <label><input type="radio" name="p5" value="1" required> Sim</label>
+                <label><input type="radio" name="p5" value="0"> Não</label>
+            </div>
+
+            <button type="button" onclick="calcularTeste()">Avaliar Meus Hábitos</button>
+        </form>
+
+        <div id="resultadoTeste" class="resultado-container"></div>
+    </section>
+
+    <section id="calculadora" class="secao-calculadora">
+        <h2 class="titulo-secao">Calculadora de Rotina</h2>
+        <div class="form-calculadora">
+            <div class="campo">
+                <label for="horasSono">Horas de sono por noite:</label>
+                <input type="number" id="horasSono" min="0" max="24" placeholder="Ex: 8">
+            </div>
+            <div class="campo">
+                <label for="horasEstudo">Horas de estudo por dia:</label>
+                <input type="number" id="horasEstudo" min="0" max="24" placeholder="Ex: 5">
+            </div>
+            <div class="campo">
+                <label for="horasCelular">Horas no celular por dia:</label>
+                <input type="number" id="horasCelular" min="0" max="24" placeholder="Ex: 4">
+            </div>
+            <button type="button" onclick="calcularRotina()">Analisar Rotina</button>
+            <div id="resultadoCalculadora" class="resultado-container"></div>
+        </div>
+    </section>
+
+    <section id="romanos" class="secao-romanos">
+        <h2 class="titulo-secao">Conversor Romano para Decimal</h2>
+        <div class="form-romano">
+            <p>Insira um numeral romano (ex: <code>XIV</code>, <code>MMXXVI</code>) ou um número inteiro:</p>
+            <input type="text" id="inputRomano" placeholder="Ex: XIV ou 14">
+            <button type="button" onclick="executarConversaoRomana()">Converter</button>
+            <div id="resultadoRomano" class="resultado-container"></div>
+        </div>
+    </section>
+
+    <button id="btnTopo" onclick="voltarAoTopo()">▲ Topo</button>
+
+    <footer class="rodape">
+        <div class="bambi-moldura-retro">
+            <img src="../img/bambi.png" alt="Bambi Retro" class="img-bambi">
+        </div>
+        <p>Criado por: <strong>Tarso Silva Rodrigues</strong></p>
+        <p>&copy; 2026 WEGA'S HEALTHY HABITS. Todos os direitos reservados (eu acho).</p>
+    </footer>
+
+    <script src="../js/codigo.js"></script>
+</body>
+</html>
